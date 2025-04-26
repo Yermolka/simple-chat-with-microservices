@@ -1,0 +1,26 @@
+[tool.ruff]
+line-length = 128
+src = ["chat_service"]
+
+[project]
+name = "chat-service"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Yermolka", email = "yermolturk@gmail.com"},
+]
+dependencies = ["grpcio-tools>=1.71.0", "grpcio>=1.71.0", "fastapi>=0.115.12", "psycopg[pool]>=3.2.6", "uvicorn>=0.34.2"]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.build]
+include = ["chat_service"]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

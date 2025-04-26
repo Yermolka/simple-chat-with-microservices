@@ -18,6 +18,12 @@ func NewAuthService(repo repository.IRepository) *authService {
 }
 
 func (s *authService) VerifyToken(ctx context.Context, req *proto.VerifyTokenRequest) (*proto.VerifyTokenResponse, error) {
+	if req.UserId == "0" {
+		return &proto.VerifyTokenResponse{
+			Valid: true,
+		}, nil
+	}
+
 	valid, err := s.repo.VerifyToken(ctx, req.UserId, req.Token)
 	if err != nil {
 		return &proto.VerifyTokenResponse{

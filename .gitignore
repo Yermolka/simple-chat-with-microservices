@@ -1,0 +1,6 @@
+__pypackages__/*
+.env
+.pdm*
+.venv/*
+__pycache__/*
+*.pyc

@@ -1,0 +1,20 @@
+{
+    "python.analysis.extraPaths": [
+      "services/chat-service",
+      "services/chat-service/__pypackages__/3.12/lib"
+    ],
+    "python.autoComplete.extraPaths": [
+      "services/chat-service"
+    ],
+    "python.analysis.ignore": [
+      "**/site-packages/**/*.py",
+      ".vscode/*.py",
+      "__pypackages__/**/*.py"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "cSpell.language": "en,ru",
+  }
+  
